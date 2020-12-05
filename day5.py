@@ -2,7 +2,6 @@ boarding_passes = open('day5-input.txt', 'r').readlines()
 
 # Find the row and column
 # return row * 8 + column
-
 # first 7 characters is front - back (128 rows)
 # last 3 is left - right (8 columns)
 def find_row(boarding_pass):
@@ -32,9 +31,6 @@ def find_column(boarding_pass):
 def findSeatId(boarding_pass):
     row = find_row(boarding_pass[0:7])
     column = find_column(boarding_pass[7:])
-    # print(boarding_pass[0:7])
-    # print(boarding_pass[7:])
-    # print(row, column)
     return row * 8 + column
 
 def findSeat():
@@ -50,10 +46,6 @@ print('BFFFBBFRRR', findSeatId('BFFFBBFRRR'))
 print('FFFBBBFRRR', findSeatId('FFFBBBFRRR'))
 print('BBFFBBFRLL', findSeatId('BBFFBBFRLL'))
 
-# print('FFFFFFF', find_row('FFFFFFF'))
-# print('BBBBBBB', find_row('BBBBBBB'))
-# print('RLL', find_column('RLL'))
-# print('RRR', find_column('RRR'))
 print(findSeat())
 
 # no seats at the front OR back (where row = 0 or row = 127)
