@@ -14,15 +14,11 @@ def is_valid(num, preamble):
 def solvePart1():
     preamble = lines[0:25]
     msg = lines[25:]
-    print('msg', msg)
     for num in msg:
-        print('preamble', preamble)
-        print('num', num)
         if is_valid(num, preamble):
             preamble = preamble[1:]
             preamble.append(num)
         else:
-            print('Found invalid')
             return num
     return None
 
