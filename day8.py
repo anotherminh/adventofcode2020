@@ -1,5 +1,4 @@
 instructions = open('day8-input.txt').readlines()
-# instructions = open('day8-example.txt').readlines()
 
 def brokenAcc():
     instructions_ran = set()
@@ -55,7 +54,6 @@ def findFixableLines():
     fixable = []
     for idx in range(len(instructions)):
         op, num = instructions[idx].split(' ')
-        # if idx == len(instructions) - 1 and op not
         if op != 'acc':
             fixable.append(idx)
     return fixable
