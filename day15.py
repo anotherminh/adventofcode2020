@@ -9,10 +9,8 @@ def solve1(start_numbers, stop_at):
     for idx in range(len(start_numbers)):
         spoken_nums[start_numbers[idx]] = [idx]
     last_spoken_num = start_numbers[-1]
-
     turn = len(spoken_nums)
     while turn < stop_at:
-        print(spoken_nums)
         if last_spoken_num in spoken_nums:
             first_spoken = len(spoken_nums[last_spoken_num]) <= 1
             if first_spoken:
